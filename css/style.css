@@ -1,0 +1,94 @@
+:root {
+   --body: #111111;
+   --primivit: #171717;
+   --sekunder: #303030;
+
+}
+ 
+[data-theme="lightmode"] {
+
+}
+
+body {
+   background-color: var(--body);
+   font-family: "DM Sans", sans-serif;
+}
+
+.information-wrapper {
+   position: absolute;
+   top: 5vh;
+   left: 0;
+   width: 100%;
+   height: 82vh;
+}
+
+.face-wrapper {
+   position: absolute;
+   top: 0vh;
+   left: 50%;
+   transform: translate(-50%);
+   width: 23vw;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   overflow: hidden;
+   background-color: var(--primivit); 
+   border: 1px solid var(--sekunder); 
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.face-wrapper>img {
+   position: absolute;
+   bottom: 1vh;
+   left: 50%;
+   width: 24vw;
+   transform: translate(-50%);
+}
+
+.face-wrapper::before {
+   content: '';
+   position: absolute;
+   bottom: 0px;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100%;
+   height: 80%;
+   background: radial-gradient(
+     ellipse at bottom, 
+     rgba(144, 144, 144, 0.4) 0%, 
+     rgba(171, 171, 171, 0.15) 25%, 
+     transparent 65%
+   );
+   pointer-events: none;
+   z-index: 1;
+}
+
+.face-flags-wrapper {
+   position: absolute;
+   top: 2vh;
+   left: 60%;
+   transform: translate(-50%);
+   width: 3vw;
+   height: max-content;
+   padding: 5px 2px;
+   background-color: var(--primivit); 
+   border: 1px solid var(--sekunder); 
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.face-flags-wrapper>img {
+   position: relative;
+   top: 0.1vh;
+   width: 100%;
+   height: 4vh;
+}
+
+.name-label {
+   position: absolute;
+   top: 65%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: #fff;
+   font-size: 40px;
+   font-weight: 400;
+   text-decoration: underline;
+}
