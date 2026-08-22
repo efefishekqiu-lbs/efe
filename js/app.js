@@ -57,11 +57,122 @@ function typeText(target, newText) {
     }
 }
 
+const toolsHrefs = {
+    ['react']: 'https://react.dev/',
+    ['jquery']: 'https://jquery.com/',
+    ['tailwind']: 'https://tailwindcss.com/',
+    ['threejs']: 'https://threejs.org/',
+    ['nodejs']: 'https://nodejs.org/',
+    ['express']: 'https://expressjs.com/',
+    ['lua']: 'https://www.lua.org/',
+    ['typescript']: 'https://www.typescriptlang.org/',
+    ['websocket']: 'https://websocket.org/',
+    ['jwt']: 'https://www.jwt.io/',
+    ['oauth']: 'https://oauth.net/2/',
+    ['passportjs']: 'https://www.passportjs.org/',
+    ['mongodb']: 'https://www.mongodb.com/',
+    ['postgresql']: 'https://www.postgresql.org/',
+    ['heidisql']: 'https://www.heidisql.com/',
+    ['figma']: 'https://www.figma.com/',
+    ['adobeillustrator']: 'https://www.adobe.com/products/illustrator.html',
+}
+
+let faqQuestions = {
+    ['1']: `I usually start by breaking the idea into its core pages, user flows, and technical requirements. From there, I connect the frontend, backend, database, and APIs into one system, keeping the architecture simple enough to maintain and flexible enough to grow.`,
+    ['2']: `I don't treat design and development as separate steps. The interface is planned around real interactions, responsive behavior, and performance from the beginning. That way, the final product feels consistent rather than like a design simply translated into code.`,
+    ['3']: `The layout is adapted per device rather than simply scaled down. Desktop can use the full composition, while mobile gets a more focused version with the same essential content. I also test interactions, performance, and accessibility across different screen sizes.`,
+    ['4']: `Launch is only the starting point. I monitor performance, fix unexpected issues, improve loading times, and make adjustments based on real usage. The goal is to leave behind a system that is stable today but also easy to update tomorrow.`,
+}
+
+function chooseFaqQuestion(id) {
+    if (faqQuestions[id]) {
+        $('.frequently-askedBox-questions-question').find('div').css('background-color', '#929292')
+        $('.frequently-askedBox-questions-question').find('span').css('color', '#929292')
+        $(`.frequently-askedBox-questions-question[data-id="${id}"]`).find('div').css('background-color', '#f3f3f3')
+        $(`.frequently-askedBox-questions-question[data-id="${id}"]`).find('span').css('color', '#f3f3f3')
+        $('.frequently-askedBox-answer').html(faqQuestions[id])
+    }
+}
+
 $(document).ready(function() {
     $('header>h1').html('')
     setTimeout(() => {
        typeText('header>h1', 'Efe Fishekqiu')
     }, 10);
     $('img').on('dragstart', function(event) { event.preventDefault(); });
+
+    $(document).on('click', '.tools-wrapper-mainWrapper-divider-option', function() {
+        let id = $(this).attr('data-id');
+        if (toolsHrefs[id]) {
+            window.open(toolsHrefs[id], '_blank')
+        }
+    })
+    
+    $(document).on('click', '.frequently-askedBox-questions-question', function() {
+        let id = $(this).attr('data-id');
+        chooseFaqQuestion(id)
+    })
+    chooseFaqQuestion('1')
 })
 
+$(document).ready(function(){
+    let currentStep=0;
+    let isScrolling=false;
+    const steps=[$(".information-wrapper"),$("section")];
+    const duration=700;
+
+    function easeInOut(t){
+        return t<0.5
+            ?2*t*t
+            :1-Math.pow(-2*t+2,2)/2;
+    }
+
+    function goToStep(step){
+        if(step<0||step>=steps.length||isScrolling)return;
+
+        isScrolling=true;
+        currentStep=step;
+
+        const target=step===0?0:steps[step].offset().top-80;
+        const start=window.scrollY;
+        const distance=target-start;
+        const startTime=performance.now();
+
+        function animate(time){
+            const progress=Math.min((time-startTime)/duration,1);
+            const eased=easeInOut(progress);
+
+            window.scrollTo(0,start+(distance*eased));
+
+            if(progress<1){
+                requestAnimationFrame(animate);
+            }else{
+                window.scrollTo(0,target);
+                isScrolling=false;
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    $(window).on("wheel",function(e){
+        e.preventDefault();
+        if(isScrolling)return;
+
+        if(e.originalEvent.deltaY>0){
+            goToStep(currentStep+1);
+        }else if(e.originalEvent.deltaY<0){
+            goToStep(currentStep-1);
+        }
+    });
+
+    $(document).on("keydown",function(e){
+        if(e.key==="ArrowDown"){
+            e.preventDefault();
+            goToStep(currentStep+1);
+        }else if(e.key==="ArrowUp"){
+            e.preventDefault();
+            goToStep(currentStep-1);
+        }
+    });
+});
