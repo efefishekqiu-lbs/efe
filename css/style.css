@@ -262,7 +262,7 @@ yellowText {
   position: absolute;
   top: 15vh;
   left: 58.8%;
-  width: 6vw;
+  width: 5vw;
   height: 12vh;
 }
 
@@ -364,17 +364,26 @@ yellowText {
   position: absolute;
   top: 11vh;
   left: 5%;
-  width: 30vw;
-  height: 20vh;
+  width: 28vw;
+  height: 23vh;
   background-color: #171717;
   border: 2px solid #262626;
   border-radius: 3px;
 }
 
+.information-box > h1 {
+  position: absolute;
+  top: 1.5vh;
+  left: 1vw;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 .information-box-tags {
   position: absolute;
-  top: -2vh;
-  right: -1vw;
+  top: -2.5vh;
+  right: -1.2vw;
   width: max-content;
   padding: 0px 15px;
   height: 3.5vh;
@@ -397,7 +406,7 @@ yellowText {
 
 .information-box > span {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   width: 95%;
   height: max-content;
@@ -405,9 +414,211 @@ yellowText {
   transform: translate(-50%, -50%);
   display: inline-block;
   color: #dddcdc;
+  font-size: 15px;
   font-family: "Cabinet";
 }
 
 strong {
   color: #fff;
+}
+
+.tools-wrapper {
+  position: absolute;
+  top: 36vh;
+  left: 5%;
+  width: 28vw;
+  height: 47.5vh;
+  background-color: #171717;
+  border: 2px solid #262626;
+  border-radius: 3px;
+}
+
+.tools-wrapper > h1 {
+  position: absolute;
+  top: 1.5vh;
+  left: 1vw;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.tools-wrapper-mainWrapper {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 85%;
+}
+
+.tools-wrapper-mainWrapper-divider {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 6px 8px;
+  width: 100%;
+  min-height: 7vh;
+  height: auto;
+  padding: 3.5vh 1vw 10px;
+  box-sizing: border-box;
+}
+
+.tools-wrapper-mainWrapper-divider > h1 {
+  position: absolute;
+  top: 1vh;
+  left: 1vw;
+  margin: 0;
+  font-size: 11.5px;
+  color: #c4c4c4;
+  text-decoration: underline;
+  letter-spacing: 0.8px;
+}
+
+.tools-wrapper-mainWrapper-divider-option {
+  position: relative;
+  width: max-content;
+  height: max-content;
+  padding: 3px 10px;
+  font-size: 11px;
+  color: #fff;
+  border: 1px solid #4c4c4c;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+.workimages-wrapper {
+  position: absolute;
+  top: 71.6vh;
+  left: 19%;
+  width: 33vw;
+  height: 12vh;
+}
+
+.workimages-wrapper-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16vw;
+  height: 100%;
+  background-color: #171717;
+  border: 2px solid #262626;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent 20%, transparent 80%, rgba(0, 0, 0, 0.4));
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.workimages-wrapper-box-shadow {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* box-shadow:
+    inset 0 35px 35px -35px rgb(0, 0, 0),
+    inset 0 -35px 35px -35px rgba(0, 0, 0),
+    inset 35px 0 35px -35px rgba(0, 0, 0),
+    inset -35px 0 35px -35px rgba(0, 0, 0); */
+  box-shadow: 24px 39px 172px -14px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: 24px 39px 172px -14px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 24px 39px 172px -14px rgba(0, 0, 0, 0.75) inset;
+}
+
+.workimages-wrapper-box > h1 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: 1px white;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.workimages-wrapper-box > svg {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 1px white;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.workimages-wrapper-box-upperPics,
+.workimages-wrapper-box-lowerPics {
+  position: absolute;
+  left: 0;
+
+  width: max-content;
+  height: 40%;
+
+  display: flex;
+  flex-wrap: nowrap;
+
+  overflow: hidden;
+}
+
+.workimages-wrapper-box-upperPics {
+  top: 5%;
+  animation: upperScroll 20s linear infinite;
+}
+
+.workimages-wrapper-box-lowerPics {
+  top: 55%;
+  animation: lowerScroll 20s linear infinite;
+}
+
+.workimages-wrapper-box-upperPics > img,
+.workimages-wrapper-box-lowerPics > img {
+  flex-shrink: 0;
+
+  width: 4vw;
+  height: 100%;
+  margin-right: 5px;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes upperScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes lowerScroll {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.workimages-line {
+  position: absolute;
+  top: 53.5%;
+  right: 50%;
+  transform: translate(0, -50%);
+  width: 78.5%;
+  height: 0.1vh;
+  background-color: #929292;
+}
+
+
+.opacityLow:hover {
+  transition: opacity ease-in 100ms;
+  opacity: 70%;
+  cursor: pointer;
 }
