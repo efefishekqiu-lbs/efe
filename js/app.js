@@ -8,6 +8,7 @@ $(window).on("scroll", function () {
                 'border-color': '#242424',
                 'box-shadow': '0 2px 16px #00000008',
                 'background-color': 'color-mix(in srgb, #1c1c1c 70%, transparent)',
+                'backdrop-filter': 'blur(20px)',
                 'width': '35%',
             })
             typeText('header>h1', 'E.F')
@@ -19,7 +20,8 @@ $(window).on("scroll", function () {
                 'border-color': 'transparent',
                 'box-shadow': 'none',
                 'background-color': 'transparent',
-                'width': '40%',
+                'backdrop-filter': 'blur(0px)',
+                'width': '55%',
             })
             typeText('header>h1', 'Efe Fishekqiu')
         }
@@ -118,7 +120,7 @@ $(document).ready(function() {
 $(document).ready(function(){
     let currentStep=0;
     let isScrolling=false;
-    const steps=[$(".information-wrapper"),$("section")];
+    const steps=[$(".viewPort"),$(".information"),$('.projects'),$('.footer')];
     const duration=700;
 
     function easeInOut(t){
@@ -129,6 +131,36 @@ $(document).ready(function(){
 
     function goToStep(step){
         if(step<0||step>=steps.length||isScrolling)return;
+        $('.header-options-option').css('color', '#dedede')
+        $('.header-options-option > div').hide()
+        $('.header-options-option').css({
+            'position': 'relative',
+            'top': '0',
+        })
+        if (step == 1) {
+            $('.header-options-option[data-type="about"]').css('color', '#fff')
+            $('.header-options-option[data-type="about"]>div').show()
+            $('.header-options-option[data-type="about"]').css({
+                'position': 'relative',
+                'top': '-0.5vh',
+            })
+        }
+        if (step == 2) {
+            $('.header-options-option[data-type="work"]').css('color', '#fff')
+            $('.header-options-option[data-type="work"]>div').show()
+            $('.header-options-option[data-type="work"]').css({
+                'position': 'relative',
+                'top': '-0.5vh',
+            })
+        }
+        if (step == 3) {
+            $('.header-options-option[data-type="contact"]').css('color', '#fff')
+            $('.header-options-option[data-type="contact"]>div').show()
+            $('.header-options-option[data-type="contact"]').css({
+                'position': 'relative',
+                'top': '-0.5vh',
+            })
+        }
 
         isScrolling=true;
         currentStep=step;
@@ -175,4 +207,44 @@ $(document).ready(function(){
             goToStep(currentStep-1);
         }
     });
+
+    $(document).on('click', 'header>h1', function() {
+        goToStep(0)
+    })
+    $(document).on('click', '.viewport-scrollInfo>h1, .viewport-scrollInfo>svg', function() {
+        goToStep(1)
+    })
+    $(document).on('click', '.advise-viewMyWork', function() {
+        goToStep(2)
+    })
+    $(document).on('click', '.advise-contactMe', function() {
+        goToStep(3)
+    })
+    $(document).on('click', '.header-options-option', function() {
+        let type = $(this).attr('data-type');
+        if (type == 'about') {
+            goToStep(1)
+        }
+        if (type == 'work') {
+            goToStep(2)
+        }
+        if (type == 'contact') {
+            goToStep(3)
+        }
+    })
+    $(document).on('click', '.footer-wrapper-boxes-box-navigationList-option', function() {
+        let type = $(this).attr('data-type');
+        if (type == 'home') {
+            goToStep(0)
+        }
+        if (type == 'about') {
+            goToStep(1)
+        }
+        if (type == 'work') {
+            goToStep(2)
+        }
+        if (type == 'contact') {
+            goToStep(3)
+        }
+    })
 });
