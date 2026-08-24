@@ -831,6 +831,13 @@ section:nth-of-type(4) {
   font-weight: 400;
 }
 
+.map-box>img {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 30vw;
+}
+
 .map-svg {
   position: absolute;
   top: 10vh;
@@ -842,7 +849,7 @@ section:nth-of-type(4) {
 .projects > h1 {
   position: absolute;
   top: 2vh;
-  left: 8vw;
+  left: 6vw;
   color: #fff;
   font-weight: 500;
   font-size: 24px;
@@ -852,17 +859,24 @@ section:nth-of-type(4) {
 .projects > h2 {
   position: absolute;
   top: 6vh;
-  left: 8vw;
+  left: 6vw;
   color: #c9c9c9a0;
   font-weight: 400;
   font-size: 13px;
   letter-spacing: 1px;
 }
 
+.projects-globe {
+  position: absolute;
+  top: 0;
+  left: 25vw;
+  width: 10vw;
+}
+
 .projects-sortWrapper {
   position: absolute;
   top: 12vh;
-  left: 8vw;
+  left: 6vw;
   width: 60%;
   height: 3.5vh;
 }
@@ -896,8 +910,8 @@ section:nth-of-type(4) {
 .projects-projectsList {
   position: absolute;
   top: 18vh;
-  left: 8vw;
-  width: 83.8%;
+  left: 6vw;
+  width: 87.8%;
   height: 60vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -967,7 +981,7 @@ section:nth-of-type(4) {
 .projects > h3 {
   position: absolute;
   bottom: 4.5vh;
-  left: 8vw;
+  left: 6vw;
   color: #fff;
   font-size: 13.5px;
   font-weight: 500;
@@ -976,7 +990,7 @@ section:nth-of-type(4) {
 .projects-controllerWrapper {
   position: absolute;
   bottom: 4.5vh;
-  right: 8vw;
+  right: 6vw;
   width: 7vw;
   height: 4vh;
   border-radius: 25px;
