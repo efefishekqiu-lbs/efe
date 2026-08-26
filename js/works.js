@@ -10,9 +10,9 @@ const works = {
             'mongodb',
         ],
         medias: [
-            'https://cdn.discordapp.com/attachments/1226966712901959770/1540877435871170630/content.png?ex=6a8b8d70&is=6a8a3bf0&hm=67330d83f032d11090eac33573bf0fea7c7499e605c4f5adbf685c3d003f3a7d&',
-            'https://cdn.discordapp.com/attachments/1226966712901959770/1540876127784927314/content.png?ex=6a8b8c38&is=6a8a3ab8&hm=560dd6459f37020e87285ef390a75d5936409d5c776730929c426204ec69bdd2&',
-            'https://cdn.discordapp.com/attachments/1226966712901959770/1540888937571160145/content.png?ex=6a8b9827&is=6a8a46a7&hm=6c6f84e6f80b4dc6d090d903002a31afc55ad2057357622897380916446a3c43&',
+            'https://media.discordapp.net/attachments/1442125719139385446/1485041620637323375/image.png?ex=6a8f67c9&is=6a8e1649&hm=0d921c4246fecaa3695627657e0bc292b79587c386bcd0290fda78b57bbd8e8b&=&format=webp&quality=lossless&width=640&height=303',
+            'https://media.discordapp.net/attachments/1442125719139385446/1485041620637323375/image.png?ex=6a8f67c9&is=6a8e1649&hm=0d921c4246fecaa3695627657e0bc292b79587c386bcd0290fda78b57bbd8e8b&=&format=webp&quality=lossless&width=640&height=303',
+            'https://media.discordapp.net/attachments/1442125719139385446/1485041620637323375/image.png?ex=6a8f67c9&is=6a8e1649&hm=0d921c4246fecaa3695627657e0bc292b79587c386bcd0290fda78b57bbd8e8b&=&format=webp&quality=lossless&width=640&height=303',
         ],
         year: '2024',
         demoLink: 'https://fiveshieldac.xyz/',
