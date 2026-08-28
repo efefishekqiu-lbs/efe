@@ -165,7 +165,7 @@ $(document).ready(function(){
         isScrolling=true;
         currentStep=step;
 
-        const target=step===0?0:steps[step].offset().top-59;
+        const target=step===0?0:steps[step].offset().top-50;
         const start=window.scrollY;
         const distance=target-start;
         const startTime=performance.now();
