@@ -9,7 +9,7 @@ $(window).on("scroll", function () {
                 'box-shadow': '0 2px 16px #00000008',
                 'background-color': 'color-mix(in srgb, #1c1c1c 70%, transparent)',
                 'backdrop-filter': 'blur(20px)',
-                'width': '35%',
+                'width': '38%',
             })
             typeText('header>h1', 'E.F')
         }
@@ -21,7 +21,7 @@ $(window).on("scroll", function () {
                 'box-shadow': 'none',
                 'background-color': 'transparent',
                 'backdrop-filter': 'blur(0px)',
-                'width': '55%',
+                'width': '60%',
             })
             typeText('header>h1', 'Efe Fishekqiu')
         }
@@ -165,7 +165,7 @@ $(document).ready(function(){
         isScrolling=true;
         currentStep=step;
 
-        const target=step===0?0:steps[step].offset().top-80;
+        const target=step===0?0:steps[step].offset().top-50;
         const start=window.scrollY;
         const distance=target-start;
         const startTime=performance.now();
