@@ -795,7 +795,7 @@ section:nth-of-type(2) {
 }
 
 section:nth-of-type(3) {
-  height: 90vh !important;
+  height: 93vh !important;
   margin-bottom: 6vh;
   /* background-color: rgba(0, 255, 128, 0.07); */
 }
@@ -859,7 +859,7 @@ section:nth-of-type(4) {
 
 .projects > h2 {
   position: absolute;
-  top: 8.5vh;
+  top: 8vh;
   left: 6vw;
   color: #c9c9c9a0;
   font-weight: 400;
@@ -913,11 +913,11 @@ section:nth-of-type(4) {
   top: 21.5vh;
   left: 6vw;
   width: 87.8%;
-  height: 60vh;
+  height: 65vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 10px;
-  row-gap: 15px;
+  row-gap: 2px;
 }
 
 .projects-projectsList-project {
@@ -981,7 +981,7 @@ section:nth-of-type(4) {
 
 .projects > h3 {
   position: absolute;
-  bottom: 4.5vh;
+  bottom: 0.5vh;
   left: 6vw;
   color: #fff;
   font-size: 13.5px;
@@ -990,7 +990,7 @@ section:nth-of-type(4) {
 
 .projects-controllerWrapper {
   position: absolute;
-  bottom: 4.5vh;
+  bottom: 0.5vh;
   right: 6vw;
   width: 7vw;
   height: 4vh;
@@ -1073,11 +1073,11 @@ footer {
 
 .footer-underlabel {
   position: absolute;
-  bottom: 63.5vh;
+  bottom: 62.5vh;
   left: 50%;
   transform: translate(-50%);
   color: #a7a7a7;
-  font-size: 17px;
+  font-size: 16px;
   text-align: center;
   font-weight: 300;
 }
@@ -1117,7 +1117,7 @@ footer {
   left: 0;
   width: max-content;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 26px;
   color: #fff;
 }
 
@@ -1125,17 +1125,17 @@ footer {
   position: absolute;
   top: 6vh;
   left: 0;
-  width: 9vw;
+  width: 14vw;
   line-height: 2vh;
   /* letter-spacing: 0.2px; */
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12.5px;
   color: #bababad2;
 }
 
 .footer-dotPulse {
   position: absolute;
-  top: 13vh;
+  top: 12vh;
   left: 0.65vw;
   color: #fff;
   font-size: 13px;
@@ -1219,7 +1219,7 @@ footer {
   top: 1vh;
   left: 0;
   width: max-content;
-  font-size: 14px;
+  font-size: 12.5px;
   font-weight: 400;
   letter-spacing: 2px;
   color: #d4d4d4;
@@ -1248,7 +1248,7 @@ footer {
   left: 0;
   transform: translate(0, -50%);
   color: #b1b1b1c0;
-  font-size: 22px;
+  font-size: 19px;
 }
 
 .footer-wrapper-boxes-box-contactList-option > h2 {
@@ -1257,7 +1257,7 @@ footer {
   left: 1.8vw;
   transform: translate(0, -50%);
   color: #e2e2e2e3;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
 }
 
@@ -1284,7 +1284,7 @@ footer {
   right: 0;
   transform: translate(0, -50%);
   color: #b1b1b1c0;
-  font-size: 22px;
+  font-size: 19px;
 }
 
 .footer-wrapper-boxes-box-navigationList-option > h2 {
@@ -1293,28 +1293,28 @@ footer {
   left: 0vw;
   transform: translate(0, -50%);
   color: #e2e2e2e3;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
 }
 
 .footer-wrapper-boxes-box-contactBox > h2 {
   position: absolute;
-  top: 5.6vh;
+  top: 4.6vh;
   left: 0;
   width: 80%;
   text-align: left;
   color: #e2e2e2e3;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 1px;
   font-weight: 300;
 }
 
 .footer-wrapper-boxes-box-contactBox > button {
   position: absolute;
-  top: 11.2vh;
+  top: 12.5vh;
   padding: 22px 25px;
   width: max-content;
-  height: 4vh;
+  height: 2vh;
   background-color: transparent;
   border: 1px solid #9a9a9a8a;
   font-size: 14px;
@@ -1325,8 +1325,6 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  cursor: pointer;
-  transition: all ease-in 80ms;
   cursor: pointer;
   transition: all ease-in 100ms;
 }
